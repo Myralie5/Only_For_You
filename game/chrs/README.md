@@ -11,3 +11,6 @@ Sayori's character file. Technically just Sayo-nara's OGG file.
 
 ## yuri.chr
 Yuri's character file. Technically just a poem in a text file.
+
+## regulatory.chr
+Not a character at all. Technically just a conversation in a text file.

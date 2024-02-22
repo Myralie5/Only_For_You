@@ -30,7 +30,11 @@ init python:
     # to show to the player on startup.
     splash_messages = [
         "Please support Doki Doki Literature Club.",
-        "Monika is watching you code."
+        "It's so easy to just  p u l l  t h e  t r i g g e r",
+        "Time to end this.",
+        "Wh-why?",
+        "I hope you're happy,\nyou fucking monster.",
+        "e n d  i t"
     ]
 
     ### New in 3.0.0
@@ -342,7 +346,7 @@ label splashscreen:
     if renpy.version_tuple == (6, 99, 12, 4, 2187) and not renpy.get_autoreload():
         if os.path.exists(config.gamedir + "/definitions/splash.rpy"):
             "{b}Warning:{/b} You are running the DDLC Mod Template on a version of Ren'Py that may be depreciated in the near future."
-            "Mod Template development has been focused to support DDLC on either Ren'Py 7 and Ren'Py 8."
+            "Mod Template development has been focused to support DDLC on Ren'Py 7 and Ren'Py 8."
             "While this template supports the current Ren'Py version, this may not be the case in the near future."
             "It is highly recommended that you upgrade to Ren'Py 7 to continue mod development. More information can be found [here](https://www.reddit.com/r/DDLCMods/wiki/notices/#wiki_why_is_the_megathread_and_other_users_recommending_me_to_create_my_mod_in_ren.27py_7.3F)."
             window hide

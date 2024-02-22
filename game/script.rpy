@@ -49,6 +49,30 @@ label start:
     # REMOVE THIS LINE WHEN YOU HAVE MADE A STORY SCRIPT FILE AND CALLED IT HERE
     call screen dialog(message="It seems that you are trying to run the mod template as a new game with no story.\nThis is a template, not an actual mod. Please code a story for your mod, call it in \'script.rpy\', and try again.", ok_action=MainMenu(confirm=False))
 
+    $ chapter = 1
+    call ch01_main
+    
+    call poem
+
+    $ chapter = 2
+    call ch02_main
+    call poemresponse_start
+    call ch02_end
+
+    call poem
+
+    $ chapter = 3
+    call ch03_main
+    call poemresponse_start
+    call ch03_end
+
+    call poem
+
+    $ chapter = 4
+    call ch04_main
+    call poemresponse_start
+    call ch04_end
+
     ## Example on calling scripts from DDLC.
     # if persistent.playthrough == 0:
     #     # This variable sets the chapter number to X depending on the chapter
