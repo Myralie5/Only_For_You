@@ -49,45 +49,49 @@ label start:
     # REMOVE THIS LINE WHEN YOU HAVE MADE A STORY SCRIPT FILE AND CALLED IT HERE
     call screen dialog(message="It seems that you are trying to run the mod template as a new game with no story.\nThis is a template, not an actual mod. Please code a story for your mod, call it in \'script.rpy\', and try again.", ok_action=MainMenu(confirm=False))
 
-    $ chapter = 1
-    call ch01_main
+    if persistent.playthrough == 0:
+        $ chapter = 1
+        call ch01_main
     
-    call poem
-
-    $ chapter = 2
-    call ch02_main
-    call poemresponse_start
-    call ch02_end
-
-    call poem
-
-    python:
-        try: renpy.file(config.basedir + "/ohno.txt")
-        except IOError: open(config.basedir + "/ohno.txt", "wb").write(renpy.file("ohno.txt").read())
-
-    $ chapter = 3
-    call ch03_main
-    call poemresponse_start
-    call ch03_end
-
-    call poem
-
-    python:
-        try: renpy.file(config.basedir + "/ohyes.txt")
-        except IOError: open(config.basedir + "/ohyes.txt", "wb").write(renpy.file("ohyes.txt").read())
-
-    $ chapter = 4
-    call ch04_main
-    call poemresponse_start
-    call ch04_end
-
-    python:
-        try: renpy.file(config.basedir + "/aghhhhhh.txt")
-        except IOError: open(config.basedir + "/aghhhhhh.txt", "wb").write(renpy.file("aghhhhhh.txt").read())
-
-    $ chapter = 5
-    call ch05_main
+    elif persistent.playthrough == 1:
+        call ch01_postnew
     
+        call poem
+
+        $ chapter = 2
+        call ch02_main
+        call poemresponse_start
+        call ch02_end
+
+        call poem
+
+        python:
+            try: renpy.file(config.basedir + "/ohno.txt")
+            except IOError: open(config.basedir + "/ohno.txt", "wb").write(renpy.file("ohno.txt").read())
+
+        $ chapter = 3
+        call ch03_main
+        call poemresponse_start
+        call ch03_end
+
+        call poem
+
+        python:
+            try: renpy.file(config.basedir + "/ohyes.txt")
+            except IOError: open(config.basedir + "/ohyes.txt", "wb").write(renpy.file("ohyes.txt").read())
+
+        $ chapter = 4
+        call ch04_main
+        call poemresponse_start
+        call ch04_end
+
+        python:
+            try: renpy.file(config.basedir + "/aghhhhhh.txt")
+            except IOError: open(config.basedir + "/aghhhhhh.txt", "wb").write(renpy.file("aghhhhhh.txt").read())
+
+        $ chapter = 5
+        call ch05_main
+
 
     ## Example on calling scripts from DDLC.
     # if persistent.playthrough == 0:

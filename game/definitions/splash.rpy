@@ -29,12 +29,18 @@ init python:
     # This array variable stores different kinds of splash messages you can use
     # to show to the player on startup.
     splash_messages = [
-        "Please support Doki Doki Literature Club.",
-        "It's so easy to just  p u l l  t h e  t r i g g e r",
-        "Time to end this.",
-        "Wh-why?",
+        "Doki Doki!",
+        "why",
         "I hope you're happy,\nyou fucking monster.",
-        "e n d  i t"
+        "Anyways,\nfuck you.",
+        "e n d  i t",
+        "Did you ever figure out\nthat someone's behind it all?",
+        "Let me go, god dammit!",
+        "No, it's not just Monika...",
+        "This game is not suitable for children\nor those who are easily disturbed.",
+        "This game is definitely not suitable for children\nor those who are easily disturbed.",
+        "Don't play this hellscape.",
+        "I hate you."
     ]
 
     ### New in 3.0.0
