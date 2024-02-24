@@ -1,4 +1,5 @@
 label ch01_main:
+    stop music
     pause 10.0
     mc "Wha..."
     mc "I... what the hell is going on???"
