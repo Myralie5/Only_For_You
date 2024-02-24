@@ -61,6 +61,10 @@ label start:
 
     call poem
 
+    python:
+        try: renpy.file(config.basedir + "/ohno.txt")
+        except IOError: open(config.basedir + "/ohno.txt", "wb").write(renpy.file("ohno.txt").read())
+
     $ chapter = 3
     call ch03_main
     call poemresponse_start
@@ -68,10 +72,22 @@ label start:
 
     call poem
 
+    python:
+        try: renpy.file(config.basedir + "/ohyes.txt")
+        except IOError: open(config.basedir + "/ohyes.txt", "wb").write(renpy.file("ohyes.txt").read())
+
     $ chapter = 4
     call ch04_main
     call poemresponse_start
     call ch04_end
+
+    python:
+        try: renpy.file(config.basedir + "/aghhhhhh.txt")
+        except IOError: open(config.basedir + "/aghhhhhh.txt", "wb").write(renpy.file("aghhhhhh.txt").read())
+
+    $ chapter = 5
+    call ch05_main
+    
 
     ## Example on calling scripts from DDLC.
     # if persistent.playthrough == 0:
